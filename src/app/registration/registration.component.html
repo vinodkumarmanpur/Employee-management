@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<form action="/action_page.php" #resgistrationForm="ngForm" (ngSubmit)="saveRegistration(resgistrationForm.value)">
+  <div class="container">
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+    <label for="fname"><b>First name</b></label>
+    <input type="text" [(ngModel)]="fname"  name="fname" >
+     <br>
+    <label for="lname"><b>Last name</b></label>
+    <input type="text" [(ngModel)]="lname" name="lname" >
+    <br>
+    <label for="username"><b>Username</b></label>
+    <input type="text" [(ngModel)]="username"  name="username" >
+    <br>
+    <label for="email"><b>Email</b></label>
+    <input type="text" [(ngModel)]="email" name="email" >
+    <br>
+    <label for="password"><b>Password</b></label>
+    <input type="text" [(ngModel)]="password" name="password" >
+    <br>
+    <label for="reppassword"><b>Repeat Password</b></label>
+    <input type="text" [(ngModel)]="reppassword" name="reppassword">
+    <hr>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+
+  <div class="container signin">
+    <p>Already have an account? <a routerLink="/signup">Sign in</a>.</p>
+  </div>
+</form>
+
+</body>
+</html>

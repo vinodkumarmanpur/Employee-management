@@ -1,0 +1,15 @@
+<form #signupForm="ngForm" (ngSubmit)="saveUsername(signupForm.value)">
+  <div class="input">
+    <label>Username</label>
+    <input type="text" name="username" [(ngModel)]="username" class="form-control">
+  </div>
+  <br>
+  <div class="input">
+    <label>Password</label>
+    <input type="text" name="password" [(ngModel)]="password" class="form-control">
+  </div>
+  <br>
+  <div class="input">
+    <input type="submit" name="Signup" value="Signup">
+  </div>
+</form>
